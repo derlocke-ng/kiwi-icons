@@ -1,0 +1,257 @@
+{
+  "base_url": "https://raw.githubusercontent.com/derlocke-ng/kiwi-icons/main",
+  "svg": "svg/{style}/{icon}.svg",
+  "png": "png/{style}/{size}/{icon}.png",
+  "png_sizes": [
+    16,
+    32,
+    48,
+    64,
+    128,
+    256,
+    512
+  ],
+  "default_style": "classic",
+  "styles": {
+    "classic": "Refined GTK icon: rim, flesh, seeds, core",
+    "flat": "No rim, larger core",
+    "night": "Inverted line mark on a dark disc"
+  },
+  "icons": {
+    "kiwi-updater": {
+      "wordmark": [
+        "kiwi",
+        "updater"
+      ],
+      "description": "Tool updater, installer and app browser (also kiwi apps)",
+      "repos": [
+        "https://github.com/derlocke-ng/kiwi-updater"
+      ],
+      "colors": {
+        "hue": 132,
+        "rim": "#4B781A",
+        "flesh": "#9CD06E",
+        "core": "#EEFAE5",
+        "ink": "#203C00",
+        "deep": "#1B2C0A",
+        "text": "#3B6209"
+      }
+    },
+    "ensconce": {
+      "wordmark": [
+        "ensconce"
+      ],
+      "description": "Post-install setup for Fedora Silverblue / Bluefin",
+      "repos": [
+        "https://github.com/derlocke-ng/ensconce"
+      ],
+      "colors": {
+        "hue": 245,
+        "rim": "#036EAE",
+        "flesh": "#68C6FF",
+        "core": "#E5F8FF",
+        "ink": "#00355D",
+        "deep": "#062942",
+        "text": "#005993"
+      }
+    },
+    "kiwi-killswitch": {
+      "wordmark": [
+        "kiwi",
+        "killswitch"
+      ],
+      "description": "Drops traffic when the VPN goes down",
+      "repos": [
+        "https://github.com/derlocke-ng/kiwi-killswitch"
+      ],
+      "colors": {
+        "hue": 22,
+        "rim": "#A74546",
+        "flesh": "#FF9795",
+        "core": "#FFEEEC",
+        "ink": "#581B1D",
+        "deep": "#3F1919",
+        "text": "#8C3436"
+      }
+    },
+    "kiwi-server": {
+      "wordmark": [
+        "kiwi",
+        "server"
+      ],
+      "description": "Creates and manages kiwi-network meshes",
+      "repos": [],
+      "colors": {
+        "hue": 85,
+        "rim": "#8B6100",
+        "flesh": "#E7B643",
+        "core": "#FEF4DF",
+        "ink": "#472D00",
+        "deep": "#342300",
+        "text": "#734E00"
+      }
+    },
+    "kiwi-cli-tools-desktop": {
+      "wordmark": [
+        "kiwi",
+        "cli tools"
+      ],
+      "description": "Desktop helpers for the command line",
+      "repos": [
+        "https://github.com/derlocke-ng/kiwi-cli-tools-desktop"
+      ],
+      "colors": {
+        "hue": 195,
+        "rim": "#007E80",
+        "flesh": "#00D9D9",
+        "core": "#DFFCFB",
+        "ink": "#004041",
+        "deep": "#002F2F",
+        "text": "#00686A"
+      }
+    },
+    "kiwi-fox": {
+      "wordmark": [
+        "kiwi",
+        "fox"
+      ],
+      "description": "Anonymization suite with integrated Firefox",
+      "repos": [
+        "https://github.com/derlocke-ng/kiwi-fox"
+      ],
+      "colors": {
+        "hue": 50,
+        "rim": "#A24E10",
+        "flesh": "#FFA167",
+        "core": "#FFF0E4",
+        "ink": "#552100",
+        "deep": "#3D1C08",
+        "text": "#883C00"
+      }
+    },
+    "kiwi-pentesting": {
+      "wordmark": [
+        "kiwi",
+        "pentesting"
+      ],
+      "description": "Pentesting module for kiwi fox",
+      "repos": [],
+      "colors": {
+        "hue": 345,
+        "rim": "#9B467A",
+        "flesh": "#FD97D2",
+        "core": "#FFEEFA",
+        "ink": "#511C3D",
+        "deep": "#3A192D",
+        "text": "#823564"
+      }
+    },
+    "kiwi-network": {
+      "wordmark": [
+        "kiwi",
+        "network"
+      ],
+      "description": "VPN mesh",
+      "repos": [],
+      "colors": {
+        "hue": 295,
+        "rim": "#6F57AB",
+        "flesh": "#C4ABFF",
+        "core": "#F6F2FF",
+        "ink": "#37275B",
+        "deep": "#292040",
+        "text": "#5B4590"
+      }
+    },
+    "kiwi-os": {
+      "wordmark": [
+        "kiwi",
+        "OS"
+      ],
+      "description": "Operating system (planned)",
+      "repos": [],
+      "colors": {
+        "hue": 315,
+        "rim": "#854F9C",
+        "flesh": "#E0A1FB",
+        "core": "#FDEFFF",
+        "ink": "#442252",
+        "deep": "#311C3A",
+        "text": "#6E3D82"
+      }
+    },
+    "kiwi-app": {
+      "wordmark": [
+        "kiwi",
+        "app"
+      ],
+      "description": "Android / smartphone app",
+      "repos": [],
+      "colors": {
+        "hue": 70,
+        "rim": "#975800",
+        "flesh": "#F7AC4D",
+        "core": "#FFF2E0",
+        "ink": "#4F2800",
+        "deep": "#392000",
+        "text": "#7E4600"
+      }
+    },
+    "kiwi-cloud": {
+      "wordmark": [
+        "kiwi",
+        "cloud"
+      ],
+      "description": "Placeholder: cloud / sync",
+      "repos": [],
+      "colors": {
+        "hue": 220,
+        "rim": "#00789C",
+        "flesh": "#25D2FC",
+        "core": "#E0FAFF",
+        "ink": "#003C52",
+        "deep": "#002D3A",
+        "text": "#006283"
+      }
+    },
+    "kiwi-backup": {
+      "wordmark": [
+        "kiwi",
+        "backup"
+      ],
+      "description": "Placeholder: backup / restore",
+      "repos": [],
+      "colors": {
+        "hue": 165,
+        "rim": "#007F56",
+        "flesh": "#51DAA7",
+        "core": "#E4FCF0",
+        "ink": "#004027",
+        "deep": "#002F1F",
+        "text": "#006944"
+      }
+    },
+    "kiwi-plugin": {
+      "wordmark": [
+        "kiwi",
+        "plugin"
+      ],
+      "description": "Placeholder: module / plugin. Used by the kiwi-fox provider modules",
+      "repos": [
+        "https://github.com/derlocke-ng/kiwi-plugin-tor",
+        "https://github.com/derlocke-ng/kiwi-plugin-vpn",
+        "https://github.com/derlocke-ng/kiwi-plugin-9proxy",
+        "https://github.com/derlocke-ng/kiwi-plugin-myst"
+      ],
+      "colors": {
+        "hue": 270,
+        "rim": "#4C62B3",
+        "flesh": "#9BB8FF",
+        "core": "#EDF5FF",
+        "ink": "#212E60",
+        "deep": "#1B2444",
+        "text": "#3C4F97"
+      }
+    }
+  }
+}

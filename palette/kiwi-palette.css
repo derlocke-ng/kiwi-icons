@@ -1,0 +1,92 @@
+:root {
+  --kiwi-updater-rim: #4B781A;
+  --kiwi-updater-flesh: #9CD06E;
+  --kiwi-updater-core: #EEFAE5;
+  --kiwi-updater-ink: #203C00;
+  --kiwi-updater-deep: #1B2C0A;
+  --kiwi-updater-text: #3B6209;
+
+  --ensconce-rim: #036EAE;
+  --ensconce-flesh: #68C6FF;
+  --ensconce-core: #E5F8FF;
+  --ensconce-ink: #00355D;
+  --ensconce-deep: #062942;
+  --ensconce-text: #005993;
+
+  --kiwi-killswitch-rim: #A74546;
+  --kiwi-killswitch-flesh: #FF9795;
+  --kiwi-killswitch-core: #FFEEEC;
+  --kiwi-killswitch-ink: #581B1D;
+  --kiwi-killswitch-deep: #3F1919;
+  --kiwi-killswitch-text: #8C3436;
+
+  --kiwi-server-rim: #8B6100;
+  --kiwi-server-flesh: #E7B643;
+  --kiwi-server-core: #FEF4DF;
+  --kiwi-server-ink: #472D00;
+  --kiwi-server-deep: #342300;
+  --kiwi-server-text: #734E00;
+
+  --kiwi-cli-tools-desktop-rim: #007E80;
+  --kiwi-cli-tools-desktop-flesh: #00D9D9;
+  --kiwi-cli-tools-desktop-core: #DFFCFB;
+  --kiwi-cli-tools-desktop-ink: #004041;
+  --kiwi-cli-tools-desktop-deep: #002F2F;
+  --kiwi-cli-tools-desktop-text: #00686A;
+
+  --kiwi-fox-rim: #A24E10;
+  --kiwi-fox-flesh: #FFA167;
+  --kiwi-fox-core: #FFF0E4;
+  --kiwi-fox-ink: #552100;
+  --kiwi-fox-deep: #3D1C08;
+  --kiwi-fox-text: #883C00;
+
+  --kiwi-pentesting-rim: #9B467A;
+  --kiwi-pentesting-flesh: #FD97D2;
+  --kiwi-pentesting-core: #FFEEFA;
+  --kiwi-pentesting-ink: #511C3D;
+  --kiwi-pentesting-deep: #3A192D;
+  --kiwi-pentesting-text: #823564;
+
+  --kiwi-network-rim: #6F57AB;
+  --kiwi-network-flesh: #C4ABFF;
+  --kiwi-network-core: #F6F2FF;
+  --kiwi-network-ink: #37275B;
+  --kiwi-network-deep: #292040;
+  --kiwi-network-text: #5B4590;
+
+  --kiwi-os-rim: #854F9C;
+  --kiwi-os-flesh: #E0A1FB;
+  --kiwi-os-core: #FDEFFF;
+  --kiwi-os-ink: #442252;
+  --kiwi-os-deep: #311C3A;
+  --kiwi-os-text: #6E3D82;
+
+  --kiwi-app-rim: #975800;
+  --kiwi-app-flesh: #F7AC4D;
+  --kiwi-app-core: #FFF2E0;
+  --kiwi-app-ink: #4F2800;
+  --kiwi-app-deep: #392000;
+  --kiwi-app-text: #7E4600;
+
+  --kiwi-cloud-rim: #00789C;
+  --kiwi-cloud-flesh: #25D2FC;
+  --kiwi-cloud-core: #E0FAFF;
+  --kiwi-cloud-ink: #003C52;
+  --kiwi-cloud-deep: #002D3A;
+  --kiwi-cloud-text: #006283;
+
+  --kiwi-backup-rim: #007F56;
+  --kiwi-backup-flesh: #51DAA7;
+  --kiwi-backup-core: #E4FCF0;
+  --kiwi-backup-ink: #004027;
+  --kiwi-backup-deep: #002F1F;
+  --kiwi-backup-text: #006944;
+
+  --kiwi-plugin-rim: #4C62B3;
+  --kiwi-plugin-flesh: #9BB8FF;
+  --kiwi-plugin-core: #EDF5FF;
+  --kiwi-plugin-ink: #212E60;
+  --kiwi-plugin-deep: #1B2444;
+  --kiwi-plugin-text: #3C4F97;
+}

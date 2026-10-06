@@ -1,0 +1,137 @@
+{
+  "styles": {
+    "default": "classic",
+    "options": [
+      "classic",
+      "flat",
+      "night"
+    ]
+  },
+  "roles": {
+    "rim": "classic outer ring",
+    "flesh": "fruit / night lines",
+    "core": "center behind glyph",
+    "ink": "seeds + glyph (classic, flat)",
+    "deep": "night background",
+    "text": "wordmark app-name color"
+  },
+  "apps": {
+    "kiwi-updater": {
+      "hue": 132,
+      "rim": "#4B781A",
+      "flesh": "#9CD06E",
+      "core": "#EEFAE5",
+      "ink": "#203C00",
+      "deep": "#1B2C0A",
+      "text": "#3B6209"
+    },
+    "ensconce": {
+      "hue": 245,
+      "rim": "#036EAE",
+      "flesh": "#68C6FF",
+      "core": "#E5F8FF",
+      "ink": "#00355D",
+      "deep": "#062942",
+      "text": "#005993"
+    },
+    "kiwi-killswitch": {
+      "hue": 22,
+      "rim": "#A74546",
+      "flesh": "#FF9795",
+      "core": "#FFEEEC",
+      "ink": "#581B1D",
+      "deep": "#3F1919",
+      "text": "#8C3436"
+    },
+    "kiwi-server": {
+      "hue": 85,
+      "rim": "#8B6100",
+      "flesh": "#E7B643",
+      "core": "#FEF4DF",
+      "ink": "#472D00",
+      "deep": "#342300",
+      "text": "#734E00"
+    },
+    "kiwi-cli-tools-desktop": {
+      "hue": 195,
+      "rim": "#007E80",
+      "flesh": "#00D9D9",
+      "core": "#DFFCFB",
+      "ink": "#004041",
+      "deep": "#002F2F",
+      "text": "#00686A"
+    },
+    "kiwi-fox": {
+      "hue": 50,
+      "rim": "#A24E10",
+      "flesh": "#FFA167",
+      "core": "#FFF0E4",
+      "ink": "#552100",
+      "deep": "#3D1C08",
+      "text": "#883C00"
+    },
+    "kiwi-pentesting": {
+      "hue": 345,
+      "rim": "#9B467A",
+      "flesh": "#FD97D2",
+      "core": "#FFEEFA",
+      "ink": "#511C3D",
+      "deep": "#3A192D",
+      "text": "#823564"
+    },
+    "kiwi-network": {
+      "hue": 295,
+      "rim": "#6F57AB",
+      "flesh": "#C4ABFF",
+      "core": "#F6F2FF",
+      "ink": "#37275B",
+      "deep": "#292040",
+      "text": "#5B4590"
+    },
+    "kiwi-os": {
+      "hue": 315,
+      "rim": "#854F9C",
+      "flesh": "#E0A1FB",
+      "core": "#FDEFFF",
+      "ink": "#442252",
+      "deep": "#311C3A",
+      "text": "#6E3D82"
+    },
+    "kiwi-app": {
+      "hue": 70,
+      "rim": "#975800",
+      "flesh": "#F7AC4D",
+      "core": "#FFF2E0",
+      "ink": "#4F2800",
+      "deep": "#392000",
+      "text": "#7E4600"
+    },
+    "kiwi-cloud": {
+      "hue": 220,
+      "rim": "#00789C",
+      "flesh": "#25D2FC",
+      "core": "#E0FAFF",
+      "ink": "#003C52",
+      "deep": "#002D3A",
+      "text": "#006283"
+    },
+    "kiwi-backup": {
+      "hue": 165,
+      "rim": "#007F56",
+      "flesh": "#51DAA7",
+      "core": "#E4FCF0",
+      "ink": "#004027",
+      "deep": "#002F1F",
+      "text": "#006944"
+    },
+    "kiwi-plugin": {
+      "hue": 270,
+      "rim": "#4C62B3",
+      "flesh": "#9BB8FF",
+      "core": "#EDF5FF",
+      "ink": "#212E60",
+      "deep": "#1B2444",
+      "text": "#3C4F97"
+    }
+  }
+}
