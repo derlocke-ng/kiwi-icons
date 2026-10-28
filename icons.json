@@ -135,7 +135,9 @@
         "pentesting"
       ],
       "description": "Pentesting module for kiwi fox",
-      "repos": [],
+      "repos": [
+        "https://github.com/derlocke-ng/kiwi-pentesting"
+      ],
       "colors": {
         "hue": 345,
         "rim": "#9B467A",

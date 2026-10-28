@@ -41,10 +41,38 @@ theme switcher, a palette for each app, and buttons that copy fetch URLs.
 | `design/` | The original design sheet (`kiwi-logo-sheet.png`) and the standalone design page |
 | `tools/render-png.sh` | Rebuilds `png/` from `svg/` |
 
+## Using an icon in a Kiwi app
+
+Every Kiwi app ships its own copy: the classic SVG, byte for byte, at a
+repo-relative path named by `ICON=` in its `kiwi.manifest`:
+
+```bash
+cp svg/classic/kiwi-fox.svg ../kiwi-fox/data/kiwi-fox.svg
+# and in kiwi-fox/kiwi.manifest:
+ICON=data/kiwi-fox.svg
+```
+
+kiwi-updater (2.2 and later) draws that file in its list, cards and detail
+view, read from the app's own clone — nothing is fetched at install time.
+Keeping the copy byte-identical to the master makes drift a one-line `cmp`.
+
+An app whose `.desktop` launcher names its own icon (`Icon=kiwi-fox`) also
+installs that SVG into the hicolor theme and rebuilds the icon cache, so an
+updated icon replaces the old one in the app grid:
+
+```bash
+dest="${KIWI_PREFIX:-$HOME/.local}/share/icons/hicolor"   # system scope: /usr/share/icons/hicolor
+install -Dm644 data/kiwi-fox.svg "$dest/scalable/apps/kiwi-fox.svg"
+gtk-update-icon-cache -qtf "$dest" 2>/dev/null || true
+```
+
+The kiwi-fox provider modules (`kiwi-plugin-tor`, `-vpn`, `-9proxy`, `-myst`)
+share the `kiwi-plugin` icon and ship it as `data/kiwi-plugin.svg`.
+
 ## Fetching an icon
 
-Until each app ships its own copy, fetch the icon from here. The URL pattern
-is:
+For anything that does not ship its own copy, fetch the icon from here. The
+URL pattern is:
 
 ```
 https://raw.githubusercontent.com/derlocke-ng/kiwi-icons/main/svg/<style>/<icon>.svg
@@ -70,13 +98,9 @@ gtk-update-icon-cache -q -t "$dest" 2>/dev/null || true
 
 Then `Icon=kiwi-fox` in the app's `.desktop` file finds it.
 
-An installer that must work offline should not depend on this fetch: vendor
-the SVG into the app's repo, or fall back to a generic icon when `curl`
-fails. To protect an app from future redesigns, swap `main` in the URL for a
-release tag.
-
-The kiwi-fox provider modules (`kiwi-plugin-tor`, `-vpn`, `-9proxy`, `-myst`)
-share the `kiwi-plugin` icon.
+An installer that must work offline should not depend on this fetch — ship a
+copy as above, or fall back to a generic icon when `curl` fails. To protect
+against future redesigns, swap `main` in the URL for a release tag.
 
 ## Changing or adding an icon
 
@@ -85,6 +109,9 @@ share the `kiwi-plugin` icon.
    entry to `icons.json`.
 3. Run `tools/render-png.sh` (needs `rsvg-convert` from `librsvg2-tools`)
    and commit the regenerated `png/`.
+4. Copy the new classic master into every app that ships it (the file its
+   `ICON=` names; for `kiwi-plugin`, all four provider modules), so the apps
+   pick up the change.
 
 The SVGs were exported from Claude and carry C2PA content credentials in
 their `<metadata>`, which account for most of each file's size. The PNG
