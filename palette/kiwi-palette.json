@@ -132,6 +132,123 @@
       "ink": "#212E60",
       "deep": "#1B2444",
       "text": "#3C4F97"
+    },
+    "kiwi-files": {
+      "hue": 35,
+      "rim": "#A64831",
+      "flesh": "#FF9B7F",
+      "core": "#FFEFE8",
+      "ink": "#581D0F",
+      "deep": "#3F1A11",
+      "text": "#8B3722"
+    },
+    "kiwi-chat": {
+      "hue": 180,
+      "rim": "#00806C",
+      "flesh": "#23DBC1",
+      "core": "#E1FCF6",
+      "ink": "#004135",
+      "deep": "#003028",
+      "text": "#006958"
+    },
+    "kiwi-docs": {
+      "hue": 232,
+      "rim": "#0074A6",
+      "flesh": "#48CDFF",
+      "core": "#E2F9FF",
+      "ink": "#003958",
+      "deep": "#002B3E",
+      "text": "#005E8C"
+    },
+    "kiwi-monitor": {
+      "hue": 150,
+      "rim": "#1D7D3E",
+      "flesh": "#75D78D",
+      "core": "#E8FBEB",
+      "ink": "#003F17",
+      "deep": "#0C2E16",
+      "text": "#09672E"
+    },
+    "kiwi-vault": {
+      "hue": 330,
+      "rim": "#914A8C",
+      "flesh": "#F09BE8",
+      "core": "#FFEEFF",
+      "ink": "#4B1F48",
+      "deep": "#361B34",
+      "text": "#793974"
+    },
+    "kiwi-dns": {
+      "hue": 283,
+      "rim": "#605CB1",
+      "flesh": "#B1B1FF",
+      "core": "#F2F3FF",
+      "ink": "#2E2A5F",
+      "deep": "#232243",
+      "text": "#4E4995"
+    },
+    "kiwi-mail": {
+      "hue": 105,
+      "rim": "#756C00",
+      "flesh": "#CBC24A",
+      "core": "#F8F7E0",
+      "ink": "#3A3400",
+      "deep": "#2B2800",
+      "text": "#605700"
+    },
+    "kiwi-mail-private": {
+      "hue": 105,
+      "rim": "#756C00",
+      "flesh": "#CBC24A",
+      "core": "#F8F7E0",
+      "ink": "#3A3400",
+      "deep": "#2B2800",
+      "text": "#605700"
+    },
+    "kiwi-mail-temp": {
+      "hue": 105,
+      "rim": "#756C00",
+      "flesh": "#CBC24A",
+      "core": "#F8F7E0",
+      "ink": "#3A3400",
+      "deep": "#2B2800",
+      "text": "#605700"
+    },
+    "kiwi-mail-alias": {
+      "hue": 105,
+      "rim": "#756C00",
+      "flesh": "#CBC24A",
+      "core": "#F8F7E0",
+      "ink": "#3A3400",
+      "deep": "#2B2800",
+      "text": "#605700"
+    },
+    "kiwi-mail-send": {
+      "hue": 105,
+      "rim": "#756C00",
+      "flesh": "#CBC24A",
+      "core": "#F8F7E0",
+      "ink": "#3A3400",
+      "deep": "#2B2800",
+      "text": "#605700"
+    },
+    "kiwi-mail-inbox": {
+      "hue": 105,
+      "rim": "#756C00",
+      "flesh": "#CBC24A",
+      "core": "#F8F7E0",
+      "ink": "#3A3400",
+      "deep": "#2B2800",
+      "text": "#605700"
+    },
+    "kiwi-proxy": {
+      "hue": 142,
+      "rim": "#367B30",
+      "flesh": "#87D47F",
+      "core": "#EAFBE8",
+      "ink": "#113E0E",
+      "deep": "#132E11",
+      "text": "#266521"
     }
   }
 }
