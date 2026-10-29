@@ -28,7 +28,20 @@ theme switcher, a palette for each app, and buttons that copy fetch URLs.
 | <img src="svg/classic/kiwi-app.svg" width="64" alt="kiwi-app classic"> | <img src="svg/flat/kiwi-app.svg" width="64" alt="kiwi-app flat"> | <img src="svg/night/kiwi-app.svg" width="64" alt="kiwi-app night"> | **kiwi app**<br>`kiwi-app`<br>Android / smartphone app |
 | <img src="svg/classic/kiwi-cloud.svg" width="64" alt="kiwi-cloud classic"> | <img src="svg/flat/kiwi-cloud.svg" width="64" alt="kiwi-cloud flat"> | <img src="svg/night/kiwi-cloud.svg" width="64" alt="kiwi-cloud night"> | **kiwi cloud**<br>`kiwi-cloud`<br>Placeholder: cloud / sync |
 | <img src="svg/classic/kiwi-backup.svg" width="64" alt="kiwi-backup classic"> | <img src="svg/flat/kiwi-backup.svg" width="64" alt="kiwi-backup flat"> | <img src="svg/night/kiwi-backup.svg" width="64" alt="kiwi-backup night"> | **kiwi backup**<br>`kiwi-backup`<br>Placeholder: backup / restore |
-| <img src="svg/classic/kiwi-plugin.svg" width="64" alt="kiwi-plugin classic"> | <img src="svg/flat/kiwi-plugin.svg" width="64" alt="kiwi-plugin flat"> | <img src="svg/night/kiwi-plugin.svg" width="64" alt="kiwi-plugin night"> | **kiwi plugin**<br>`kiwi-plugin`<br>Placeholder: module / plugin. Used by the kiwi-fox provider modules |
+| <img src="svg/classic/kiwi-plugin.svg" width="64" alt="kiwi-plugin classic"> | <img src="svg/flat/kiwi-plugin.svg" width="64" alt="kiwi-plugin flat"> | <img src="svg/night/kiwi-plugin.svg" width="64" alt="kiwi-plugin night"> | **kiwi plugin**<br>`kiwi-plugin`<br>Placeholder: module / plugin. Used by the kiwi-proxy provider modules |
+| <img src="svg/classic/kiwi-files.svg" width="64" alt="kiwi-files classic"> | <img src="svg/flat/kiwi-files.svg" width="64" alt="kiwi-files flat"> | <img src="svg/night/kiwi-files.svg" width="64" alt="kiwi-files night"> | **kiwi files**<br>`kiwi-files`<br>Placeholder: files / storage |
+| <img src="svg/classic/kiwi-chat.svg" width="64" alt="kiwi-chat classic"> | <img src="svg/flat/kiwi-chat.svg" width="64" alt="kiwi-chat flat"> | <img src="svg/night/kiwi-chat.svg" width="64" alt="kiwi-chat night"> | **kiwi chat**<br>`kiwi-chat`<br>Placeholder: chat / messaging |
+| <img src="svg/classic/kiwi-docs.svg" width="64" alt="kiwi-docs classic"> | <img src="svg/flat/kiwi-docs.svg" width="64" alt="kiwi-docs flat"> | <img src="svg/night/kiwi-docs.svg" width="64" alt="kiwi-docs night"> | **kiwi docs**<br>`kiwi-docs`<br>Placeholder: documentation / notes |
+| <img src="svg/classic/kiwi-monitor.svg" width="64" alt="kiwi-monitor classic"> | <img src="svg/flat/kiwi-monitor.svg" width="64" alt="kiwi-monitor flat"> | <img src="svg/night/kiwi-monitor.svg" width="64" alt="kiwi-monitor night"> | **kiwi monitor**<br>`kiwi-monitor`<br>Placeholder: status / monitoring |
+| <img src="svg/classic/kiwi-vault.svg" width="64" alt="kiwi-vault classic"> | <img src="svg/flat/kiwi-vault.svg" width="64" alt="kiwi-vault flat"> | <img src="svg/night/kiwi-vault.svg" width="64" alt="kiwi-vault night"> | **kiwi vault**<br>`kiwi-vault`<br>Placeholder: passwords / keys |
+| <img src="svg/classic/kiwi-dns.svg" width="64" alt="kiwi-dns classic"> | <img src="svg/flat/kiwi-dns.svg" width="64" alt="kiwi-dns flat"> | <img src="svg/night/kiwi-dns.svg" width="64" alt="kiwi-dns night"> | **kiwi dns**<br>`kiwi-dns`<br>Placeholder: DNS / domains |
+| <img src="svg/classic/kiwi-mail.svg" width="64" alt="kiwi-mail classic"> | <img src="svg/flat/kiwi-mail.svg" width="64" alt="kiwi-mail flat"> | <img src="svg/night/kiwi-mail.svg" width="64" alt="kiwi-mail night"> | **kiwi mail**<br>`kiwi-mail`<br>Mail service (main icon) |
+| <img src="svg/classic/kiwi-mail-private.svg" width="64" alt="kiwi-mail-private classic"> | <img src="svg/flat/kiwi-mail-private.svg" width="64" alt="kiwi-mail-private flat"> | <img src="svg/night/kiwi-mail-private.svg" width="64" alt="kiwi-mail-private night"> | **kiwi mail private**<br>`kiwi-mail-private`<br>Mail: encrypted / privacy mailbox |
+| <img src="svg/classic/kiwi-mail-temp.svg" width="64" alt="kiwi-mail-temp classic"> | <img src="svg/flat/kiwi-mail-temp.svg" width="64" alt="kiwi-mail-temp flat"> | <img src="svg/night/kiwi-mail-temp.svg" width="64" alt="kiwi-mail-temp night"> | **kiwi mail temp**<br>`kiwi-mail-temp`<br>Mail: throwaway / disposable address |
+| <img src="svg/classic/kiwi-mail-alias.svg" width="64" alt="kiwi-mail-alias classic"> | <img src="svg/flat/kiwi-mail-alias.svg" width="64" alt="kiwi-mail-alias flat"> | <img src="svg/night/kiwi-mail-alias.svg" width="64" alt="kiwi-mail-alias night"> | **kiwi mail alias**<br>`kiwi-mail-alias`<br>Mail: aliases / forwarding |
+| <img src="svg/classic/kiwi-mail-send.svg" width="64" alt="kiwi-mail-send classic"> | <img src="svg/flat/kiwi-mail-send.svg" width="64" alt="kiwi-mail-send flat"> | <img src="svg/night/kiwi-mail-send.svg" width="64" alt="kiwi-mail-send night"> | **kiwi mail send**<br>`kiwi-mail-send`<br>Mail: compose / outgoing |
+| <img src="svg/classic/kiwi-mail-inbox.svg" width="64" alt="kiwi-mail-inbox classic"> | <img src="svg/flat/kiwi-mail-inbox.svg" width="64" alt="kiwi-mail-inbox flat"> | <img src="svg/night/kiwi-mail-inbox.svg" width="64" alt="kiwi-mail-inbox night"> | **kiwi mail inbox**<br>`kiwi-mail-inbox`<br>Mail: inbox / client |
+| <img src="svg/classic/kiwi-proxy.svg" width="64" alt="kiwi-proxy classic"> | <img src="svg/flat/kiwi-proxy.svg" width="64" alt="kiwi-proxy flat"> | <img src="svg/night/kiwi-proxy.svg" width="64" alt="kiwi-proxy night"> | **kiwi proxy**<br>`kiwi-proxy`<br>Proxy / traffic relay |
 
 ## Layout
 
@@ -66,7 +79,7 @@ install -Dm644 data/kiwi-fox.svg "$dest/scalable/apps/kiwi-fox.svg"
 gtk-update-icon-cache -qtf "$dest" 2>/dev/null || true
 ```
 
-The kiwi-fox provider modules (`kiwi-plugin-tor`, `-vpn`, `-9proxy`, `-myst`)
+The kiwi-proxy provider modules (`kiwi-plugin-tor`, `-vpn`, `-9proxy`, `-myst`)
 share the `kiwi-plugin` icon and ship it as `data/kiwi-plugin.svg`.
 
 ## Fetching an icon

@@ -89,4 +89,95 @@
   --kiwi-plugin-ink: #212E60;
   --kiwi-plugin-deep: #1B2444;
   --kiwi-plugin-text: #3C4F97;
+
+  --kiwi-files-rim: #A64831;
+  --kiwi-files-flesh: #FF9B7F;
+  --kiwi-files-core: #FFEFE8;
+  --kiwi-files-ink: #581D0F;
+  --kiwi-files-deep: #3F1A11;
+  --kiwi-files-text: #8B3722;
+
+  --kiwi-chat-rim: #00806C;
+  --kiwi-chat-flesh: #23DBC1;
+  --kiwi-chat-core: #E1FCF6;
+  --kiwi-chat-ink: #004135;
+  --kiwi-chat-deep: #003028;
+  --kiwi-chat-text: #006958;
+
+  --kiwi-docs-rim: #0074A6;
+  --kiwi-docs-flesh: #48CDFF;
+  --kiwi-docs-core: #E2F9FF;
+  --kiwi-docs-ink: #003958;
+  --kiwi-docs-deep: #002B3E;
+  --kiwi-docs-text: #005E8C;
+
+  --kiwi-monitor-rim: #1D7D3E;
+  --kiwi-monitor-flesh: #75D78D;
+  --kiwi-monitor-core: #E8FBEB;
+  --kiwi-monitor-ink: #003F17;
+  --kiwi-monitor-deep: #0C2E16;
+  --kiwi-monitor-text: #09672E;
+
+  --kiwi-vault-rim: #914A8C;
+  --kiwi-vault-flesh: #F09BE8;
+  --kiwi-vault-core: #FFEEFF;
+  --kiwi-vault-ink: #4B1F48;
+  --kiwi-vault-deep: #361B34;
+  --kiwi-vault-text: #793974;
+
+  --kiwi-dns-rim: #605CB1;
+  --kiwi-dns-flesh: #B1B1FF;
+  --kiwi-dns-core: #F2F3FF;
+  --kiwi-dns-ink: #2E2A5F;
+  --kiwi-dns-deep: #232243;
+  --kiwi-dns-text: #4E4995;
+
+  --kiwi-mail-rim: #756C00;
+  --kiwi-mail-flesh: #CBC24A;
+  --kiwi-mail-core: #F8F7E0;
+  --kiwi-mail-ink: #3A3400;
+  --kiwi-mail-deep: #2B2800;
+  --kiwi-mail-text: #605700;
+
+  --kiwi-mail-private-rim: #756C00;
+  --kiwi-mail-private-flesh: #CBC24A;
+  --kiwi-mail-private-core: #F8F7E0;
+  --kiwi-mail-private-ink: #3A3400;
+  --kiwi-mail-private-deep: #2B2800;
+  --kiwi-mail-private-text: #605700;
+
+  --kiwi-mail-temp-rim: #756C00;
+  --kiwi-mail-temp-flesh: #CBC24A;
+  --kiwi-mail-temp-core: #F8F7E0;
+  --kiwi-mail-temp-ink: #3A3400;
+  --kiwi-mail-temp-deep: #2B2800;
+  --kiwi-mail-temp-text: #605700;
+
+  --kiwi-mail-alias-rim: #756C00;
+  --kiwi-mail-alias-flesh: #CBC24A;
+  --kiwi-mail-alias-core: #F8F7E0;
+  --kiwi-mail-alias-ink: #3A3400;
+  --kiwi-mail-alias-deep: #2B2800;
+  --kiwi-mail-alias-text: #605700;
+
+  --kiwi-mail-send-rim: #756C00;
+  --kiwi-mail-send-flesh: #CBC24A;
+  --kiwi-mail-send-core: #F8F7E0;
+  --kiwi-mail-send-ink: #3A3400;
+  --kiwi-mail-send-deep: #2B2800;
+  --kiwi-mail-send-text: #605700;
+
+  --kiwi-mail-inbox-rim: #756C00;
+  --kiwi-mail-inbox-flesh: #CBC24A;
+  --kiwi-mail-inbox-core: #F8F7E0;
+  --kiwi-mail-inbox-ink: #3A3400;
+  --kiwi-mail-inbox-deep: #2B2800;
+  --kiwi-mail-inbox-text: #605700;
+
+  --kiwi-proxy-rim: #367B30;
+  --kiwi-proxy-flesh: #87D47F;
+  --kiwi-proxy-core: #EAFBE8;
+  --kiwi-proxy-ink: #113E0E;
+  --kiwi-proxy-deep: #132E11;
+  --kiwi-proxy-text: #266521;
 }
