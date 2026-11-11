@@ -127,6 +127,28 @@
         "ink": "#552100",
         "deep": "#3D1C08",
         "text": "#883C00"
+      },
+      "colorways": {
+        "default": "ember",
+        "svg": "colorways/kiwi-fox/{style}/{colorway}.svg",
+        "manifest": "colorways/kiwi-fox/colorways.json",
+        "options": [
+          "ember",
+          "crimson",
+          "rose",
+          "orchid",
+          "violet",
+          "indigo",
+          "ocean",
+          "teal",
+          "forest",
+          "kiwi",
+          "honey",
+          "graphite",
+          "duo-ember-ocean",
+          "duo-violet-honey",
+          "duo-graphite-ember"
+        ]
       }
     },
     "kiwi-pentesting": {
@@ -478,5 +500,14 @@
         "text": "#266521"
       }
     }
+  },
+  "kit": {
+    "builder": "builder.html",
+    "python": "kit/kiwi_icon.py",
+    "js": "kit/kiwi-icon.js",
+    "templates": "kit/templates/{style}.svg",
+    "glyphs": "kit/glyphs.json",
+    "colorways": "kit/colorways.json",
+    "readme": "kit/README.md"
   }
 }

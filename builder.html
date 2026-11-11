@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiwi Icon Builder</title>
+<meta name="description" content="Build a Kiwi-style app icon: stock kiwi base, any glyph or your own icon, any color or two. Download SVG or PNG.">
+<link rel="icon" href="svg/classic/kiwi-fox.svg">
+<style>
+  :root {
+    --bg: #faf9f5; --surface: #ffffff; --border: #e6e3da; --text: #1f1e1b; --muted: #6b6860;
+    --chip: #f0eee6; --accent: #1f1e1b; --accent-text: #faf9f5; --code-bg: #1f1e1b; --code-text: #ecebe6;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161614; --surface: #1f1f1c; --border: #33322d; --text: #ecebe6; --muted: #9c9a92;
+      --chip: #2a2a26; --accent: #ecebe6; --accent-text: #161614; --code-bg: #10100f; --code-text: #ecebe6;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161614; --surface: #1f1f1c; --border: #33322d; --text: #ecebe6; --muted: #9c9a92;
+    --chip: #2a2a26; --accent: #ecebe6; --accent-text: #161614; --code-bg: #10100f; --code-text: #ecebe6;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1120px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h2 { font-size: 15px; margin: 0; }
+  a { color: inherit; }
+  .lede { color: var(--muted); margin: 0 0 24px; max-width: 66ch; }
+  .layout { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
+  .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+  .controls { flex: 1 1 340px; max-width: 440px; }
+  .output { flex: 999 1 520px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+  .output .panel { gap: 16px; }
+  .group { display: flex; flex-direction: column; gap: 10px; }
+  .muted { color: var(--muted); font-size: 13px; }
+  .mono { font: 12.5px ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+  .glyphs { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+  .glyphs button { aspect-ratio: 1; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); padding: 4px; cursor: pointer; }
+  .glyphs button[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: var(--chip); }
+  .glyphs img { width: 100%; height: 100%; display: block; }
+
+  .swatches { display: flex; flex-wrap: wrap; gap: 8px; }
+  .swatches button { width: 32px; height: 32px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; display: grid; place-items: center; }
+  .swatches button span { width: 11px; height: 11px; border-radius: 50%; }
+
+  .row { display: flex; align-items: center; gap: 12px; }
+  .row > label:first-child { flex: 0 0 88px; font-size: 14px; }
+  .row input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); }
+  .check { display: flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer; }
+  input[type=text], textarea { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 7px 9px; min-width: 0; }
+  textarea { font: 12.5px ui-monospace, SFMono-Regular, Menlo, monospace; resize: vertical; width: 100%; }
+  input[type=color] { width: 40px; height: 30px; border: 1px solid var(--border); border-radius: 8px; padding: 2px; background: var(--surface); cursor: pointer; }
+
+  .seg { display: inline-flex; gap: 2px; background: var(--chip); border-radius: 10px; padding: 3px; width: max-content; }
+  .seg button { border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 14px; padding: 6px 12px; border-radius: 8px; cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: 0 1px 2px rgb(0 0 0 / .12); }
+  button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .previews { display: flex; flex-wrap: wrap; gap: 16px; }
+  .previews figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
+  .stage { width: 148px; height: 148px; border-radius: 26px; display: grid; place-items: center; border: 2px solid transparent; }
+  .stage.light { background: #f4f3ee; } .stage.dark { background: #1f1e1b; }
+  .stage.on { border-color: var(--accent); }
+  .sizes { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; padding-top: 14px; border-top: 1px solid var(--border); }
+  .word { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+  .pal { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 8px; padding-top: 14px; border-top: 1px solid var(--border); }
+  .pal div { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--muted); }
+  .pal i { width: 22px; height: 22px; border-radius: 6px; border: 1px solid rgb(0 0 0 / .08); flex: none; }
+  .pal b { display: block; font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--text); font-weight: 400; }
+
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .actions h2 { flex: 1 1 auto; }
+  .btn { font: inherit; font-size: 14px; border-radius: 8px; padding: 7px 13px; cursor: pointer; border: 1px solid var(--border); background: var(--surface); color: var(--text); }
+  .btn.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+  select { font: inherit; font-size: 14px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 6px 8px; }
+  pre { margin: 0; background: var(--code-bg); color: var(--code-text); border-radius: 10px; padding: 11px 13px; font: 12.5px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap; word-break: break-all; }
+  .toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: var(--accent); color: var(--accent-text); padding: 8px 14px; border-radius: 8px; font-size: 13px; opacity: 0; transition: opacity .15s; pointer-events: none; }
+  .toast.show { opacity: 1; }
+  .top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: flex-start; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <div>
+      <h1>Kiwi icon builder</h1>
+      <p class="lede">The stock kiwi base with any glyph (or your own icon) and any color, or two. What you see is exactly the
+        SVG you download. The same options work from <a href="kit/README.md">kit/kiwi_icon.py and kit/kiwi-icon.js</a>,
+        so an app can build its icon itself. <a href="./">All icons</a>.</p>
+    </div>
+    <div class="seg" role="group" aria-label="Theme" id="theme-seg">
+      <button data-theme="auto" aria-pressed="true">Auto</button>
+      <button data-theme="light" aria-pressed="false">Light</button>
+      <button data-theme="dark" aria-pressed="false">Dark</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <section class="panel controls" aria-label="Options">
+      <div class="group">
+        <h2>1 · Glyph</h2>
+        <div class="glyphs" id="glyphs"></div>
+        <div class="muted">Selected: <span class="mono" id="glyph-name">fox</span></div>
+        <div class="group" id="custom" hidden>
+          <label for="path">Your icon: SVG path <span class="mono">d</span> on a 24×24 grid</label>
+          <textarea id="path" rows="3" spellcheck="false"></textarea>
+          <div class="muted">Paste the <span class="mono">d</span> of any Lucide, Tabler or Material outline icon. Several paths? Join them with a space.</div>
+          <label class="check"><input type="checkbox" id="path-fill"> Fill instead of stroke</label>
+        </div>
+      </div>
+
+      <div class="group">
+        <h2>2 · Color</h2>
+        <div class="swatches" id="swatches"></div>
+        <div class="row"><label for="hex">Any color</label><input type="color" id="hex"><span class="mono muted" id="color-name"></span></div>
+        <div class="row"><label for="hue" id="hue-label">Hue</label><input type="range" id="hue" min="0" max="359" step="1"></div>
+        <div class="row"><label for="tone" id="tone-label">Tone</label><input type="range" id="tone" min="0" max="115" step="1"></div>
+        <label class="check"><input type="checkbox" id="two-tone"> Second color (core + glyph)</label>
+        <div class="row" id="accent-row" hidden><label for="accent" id="accent-label">Accent</label><input type="range" id="accent" min="0" max="359" step="1"></div>
+      </div>
+
+      <div class="group">
+        <h2>3 · Style and name</h2>
+        <div class="seg" role="group" aria-label="Style" id="style-seg">
+          <button data-style="classic" aria-pressed="true">Classic</button>
+          <button data-style="flat" aria-pressed="false">Flat</button>
+          <button data-style="night" aria-pressed="false">Night</button>
+        </div>
+        <div class="row"><label for="name">App name</label><input type="text" id="name" value="fox" style="flex:1"></div>
+      </div>
+    </section>
+
+    <div class="output">
+      <section class="panel" aria-label="Preview">
+        <div class="previews" id="previews"></div>
+        <div class="sizes" id="sizes"></div>
+        <div class="pal" id="pal"></div>
+      </section>
+
+      <section class="panel" aria-label="Export">
+        <div class="actions">
+          <h2>Use it</h2>
+          <button class="btn primary" id="dl-svg">Download SVG</button>
+          <label for="png-size" class="muted">PNG</label>
+          <select id="png-size"><option>16</option><option>32</option><option>48</option><option>64</option><option>128</option><option selected>256</option><option>512</option><option>1024</option></select>
+          <button class="btn" id="dl-png">Download PNG</button>
+          <button class="btn" id="copy-svg">Copy SVG</button>
+        </div>
+        <div id="snippets" class="group"></div>
+        <label for="svg-out" class="muted">SVG markup</label>
+        <textarea id="svg-out" rows="5" readonly spellcheck="false"></textarea>
+      </section>
+    </div>
+  </div>
+
+  <footer>Source: <a href="https://github.com/derlocke-ng/kiwi-icons">derlocke-ng/kiwi-icons</a> ·
+    <a href="colorways/kiwi-fox/colorways.json">kiwi fox colorways</a> · <a href="kit/README.md">kit README</a></footer>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="kit/kiwi-icon.js"></script>
+<script>
+(() => {
+  const K = window.KiwiIcon;
+  const $ = id => document.getElementById(id);
+  const SAMPLE = 'M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7Z';
+  const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch {} } };
+
+  // State, seeded from the URL so a link reproduces an icon (?glyph=fox&colorway=ocean&style=flat ...)
+  const q = new URLSearchParams(location.search);
+  const num = (v, d) => (v !== null && v !== '' && !isNaN(+v) ? +v : d);
+  const S = {
+    glyph: q.get('glyph') && (K.GLYPHS[q.get('glyph')] || q.get('glyph') === 'custom') ? q.get('glyph') : 'fox',
+    path: q.get('path') || SAMPLE, pathFill: q.get('fill') === '1',
+    colorway: q.has('hue') ? null : (K.COLORWAYS[q.get('colorway')] ? q.get('colorway') : 'ember'),
+    hue: 50, tone: 1, twoTone: false, accent: 240, pickedHex: null,
+    style: K.STYLES.includes(q.get('style')) ? q.get('style') : 'classic',
+    name: q.get('name') || 'fox'
+  };
+  if (S.colorway) { const c = K.COLORWAYS[S.colorway]; S.hue = c.hue; S.tone = c.tone; if (c.accent != null) { S.twoTone = true; S.accent = c.accent; } }
+  S.hue = num(q.get('hue'), S.hue); S.tone = num(q.get('tone'), S.tone);
+  if (q.has('accent')) { S.twoTone = true; S.accent = num(q.get('accent'), 240); }
+
+  const opts = (style) => {
+    const o = { style, title: `kiwi ${S.name || 'app'}` };
+    if (S.glyph === 'custom') { o.glyph = null; o.path = S.path.trim() || SAMPLE; o.pathFill = S.pathFill; }
+    else o.glyph = S.glyph;
+    o.hue = S.hue; o.tone = S.tone; o.accent = S.twoTone ? S.accent : null;
+    return o;
+  };
+  const slug = s => (s || 'app').trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'app';
+  const fileBase = () => `kiwi-${slug(S.name)}`;
+
+  let toastTimer;
+  function toast(msg) { const t = $('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), 1800); }
+  function save(blob, name) { const u = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = u; a.download = name; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 2000); }
+
+  // Static controls
+  const glyphKeys = [...Object.keys(K.GLYPHS), 'custom'];
+  const glyphBtns = glyphKeys.map(k => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.title = k === 'custom' ? 'custom: your own icon' : k; b.setAttribute('aria-label', b.title);
+    b.append(Object.assign(document.createElement('img'), { alt: '' }));
+    b.addEventListener('click', () => { if (S.glyph !== 'custom' && k !== 'custom' && S.name === S.glyph) S.name = k; S.glyph = k; $('name').value = S.name; update(); });
+    $('glyphs').append(b); return [k, b];
+  });
+  const swBtns = Object.entries(K.COLORWAYS).map(([k, c]) => {
+    const p = K.palette(c.hue, c.tone, c.accent);
+    const b = document.createElement('button');
+    b.type = 'button'; b.title = c.label; b.setAttribute('aria-label', c.label);
+    b.style.background = p.flesh;
+    const dot = document.createElement('span'); dot.style.background = p.core; dot.style.boxShadow = `inset 0 0 0 3px ${p.glyph}`; b.append(dot);
+    b.addEventListener('click', () => { Object.assign(S, { colorway: k, hue: c.hue, tone: c.tone, twoTone: c.accent != null, pickedHex: null }); if (c.accent != null) S.accent = c.accent; update(); });
+    $('swatches').append(b); return [k, b, p];
+  });
+  const track = 'linear-gradient(to right,' + [0, 60, 120, 180, 240, 300, 359].map(h => K.oklchToHex(0.75, 0.13, h)).join(',') + ')';
+
+  $('name').value = S.name; $('path').value = S.path; $('path-fill').checked = S.pathFill;
+  $('path').addEventListener('input', e => { S.path = e.target.value; update(); });
+  $('path-fill').addEventListener('change', e => { S.pathFill = e.target.checked; update(); });
+  $('hex').addEventListener('input', e => { const r = K.hexToHueTone(e.target.value); Object.assign(S, { hue: Math.round(r.hue), tone: Math.round(r.tone * 100) / 100, colorway: null, pickedHex: e.target.value }); update(); });
+  $('hue').addEventListener('input', e => { Object.assign(S, { hue: +e.target.value, colorway: null, pickedHex: null }); update(); });
+  $('tone').addEventListener('input', e => { Object.assign(S, { tone: +e.target.value / 100, colorway: null, pickedHex: null }); update(); });
+  $('two-tone').addEventListener('change', e => { Object.assign(S, { twoTone: e.target.checked, colorway: null }); update(); });
+  $('accent').addEventListener('input', e => { Object.assign(S, { accent: +e.target.value, colorway: null }); update(); });
+  $('name').addEventListener('input', e => { S.name = e.target.value; update(); });
+  document.querySelectorAll('#style-seg button').forEach(b => b.addEventListener('click', () => { S.style = b.dataset.style; update(); }));
+
+  $('dl-svg').addEventListener('click', () => save(new Blob([K.render(opts(S.style))], { type: 'image/svg+xml' }), fileBase() + '.svg'));
+  $('copy-svg').addEventListener('click', async () => { try { await navigator.clipboard.writeText(K.render(opts(S.style))); toast('SVG copied'); } catch { $('svg-out').select(); toast('Select and copy the markup below'); } });
+  $('dl-png').addEventListener('click', () => {
+    const px = +$('png-size').value, img = new Image();
+    img.onload = () => { const c = document.createElement('canvas'); c.width = c.height = px; c.getContext('2d').drawImage(img, 0, 0, px, px); c.toBlob(b => save(b, `${fileBase()}-${px}.png`), 'image/png'); };
+    img.src = K.dataUri(K.render({ ...opts(S.style), size: px }));
+  });
+
+  function snippetsFor() {
+    const custom = S.glyph === 'custom', p = S.path.trim() || SAMPLE, cw = S.colorway, t = Math.round(S.tone * 100) / 100;
+    const cli = ['python3 kit/kiwi_icon.py', `--glyph ${custom ? 'none' : S.glyph}`], py = [custom ? 'None' : `"${S.glyph}"`], js = [custom ? 'glyph: null' : `glyph: '${S.glyph}'`];
+    if (custom) { cli.push(`--path "${p}"`); py.push(`path="${p}"`); js.push(`path: '${p}'`); if (S.pathFill) { cli.push('--path-fill'); py.push('path_fill=True'); js.push('pathFill: true'); } }
+    if (cw) { cli.push(`--colorway ${cw}`); py.push(`colorway="${cw}"`); js.push(`colorway: '${cw}'`); }
+    else {
+      cli.push(`--hue ${S.hue} --tone ${t}`); py.push(`hue=${S.hue}, tone=${t}`); js.push(`hue: ${S.hue}, tone: ${t}`);
+      if (S.twoTone) { cli.push(`--accent ${S.accent}`); py.push(`accent=${S.accent}`); js.push(`accent: ${S.accent}`); }
+    }
+    cli.push(`--style ${S.style}`, `-o ${fileBase()}.svg`); py.push(`style="${S.style}"`); js.push(`style: '${S.style}'`);
+    return [['Command line', cli.join(' ')], ['Python', `from kiwi_icon import render\nsvg = render(${py.join(', ')})`], ['JavaScript', `KiwiIcon.render({ ${js.join(', ')} })`]];
+  }
+
+  function shareUrl() {
+    const u = new URLSearchParams({ glyph: S.glyph, style: S.style, name: S.name });
+    if (S.colorway) u.set('colorway', S.colorway); else { u.set('hue', S.hue); u.set('tone', Math.round(S.tone * 100) / 100); if (S.twoTone) u.set('accent', S.accent); }
+    if (S.glyph === 'custom') { u.set('path', S.path.trim()); if (S.pathFill) u.set('fill', '1'); }
+    return `${location.pathname}?${u}`;
+  }
+
+  function update() {
+    const pal = K.palette(S.hue, S.tone, S.twoTone ? S.accent : null);
+    // controls
+    glyphBtns.forEach(([k, b]) => {
+      b.setAttribute('aria-pressed', String(k === S.glyph));
+      const o = { ...opts('flat'), size: null, title: k };
+      if (k === 'custom') { o.glyph = null; o.path = S.path.trim() || SAMPLE; } else { o.glyph = k; delete o.path; }
+      b.firstChild.src = K.dataUri(K.render(o));
+    });
+    $('glyph-name').textContent = S.glyph;
+    $('custom').hidden = S.glyph !== 'custom';
+    swBtns.forEach(([k, b, p]) => { const on = k === S.colorway; b.setAttribute('aria-pressed', String(on)); b.style.boxShadow = on ? `0 0 0 3px var(--surface), 0 0 0 5px ${p.rim}` : `inset 0 0 0 3px ${p.rim}`; });
+    $('hex').value = (S.pickedHex || pal.rim).toLowerCase();
+    $('color-name').textContent = S.colorway ? K.COLORWAYS[S.colorway].label : (S.pickedHex ? 'custom ' + S.pickedHex : 'custom');
+    $('hue').value = S.hue; $('hue').style.background = track; $('hue-label').textContent = `Hue ${S.hue}°`;
+    $('tone').value = Math.round(S.tone * 100); $('tone-label').textContent = `Tone ${Math.round(S.tone * 100)}%`;
+    $('two-tone').checked = S.twoTone; $('accent-row').hidden = !S.twoTone;
+    $('accent').value = S.accent; $('accent').style.background = track; $('accent-label').textContent = `Accent ${S.accent}°`;
+    document.querySelectorAll('#style-seg button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.style === S.style)));
+    // preview
+    const title = `kiwi ${S.name || 'app'}`;
+    $('previews').replaceChildren(...K.STYLES.map(s => {
+      const f = document.createElement('figure');
+      const st = document.createElement('div'); st.className = `stage ${s === 'night' ? 'dark' : 'light'}${s === S.style ? ' on' : ''}`;
+      st.append(Object.assign(document.createElement('img'), { src: K.dataUri(K.render(opts(s))), width: 124, height: 124, alt: `${title}, ${s}` }));
+      f.append(st, s[0].toUpperCase() + s.slice(1)); return f;
+    }));
+    const uri = K.dataUri(K.render(opts(S.style)));
+    const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    const word = document.createElement('span'); word.className = 'word';
+    const nm = document.createElement('span'); nm.style.color = dark ? pal.flesh : pal.text; nm.textContent = ' ' + (S.name || 'app');
+    word.append('kiwi', nm);
+    const wm = document.createElement('div'); wm.style.cssText = 'display:flex;align-items:center;gap:10px';
+    wm.append(Object.assign(document.createElement('img'), { src: uri, width: 30, height: 30, alt: '' }), word);
+    $('sizes').replaceChildren(...[48, 32, 16].map(n => Object.assign(document.createElement('img'), { src: uri, width: n, height: n, alt: '' })), wm);
+    $('pal').replaceChildren(...['rim', 'flesh', 'core', 'ink', 'deep', 'glyph', 'text'].map(r => {
+      const d = document.createElement('div'); const i = document.createElement('i'); i.style.background = pal[r];
+      const t = document.createElement('span'); const b = document.createElement('b'); b.textContent = pal[r]; t.append(b, r); d.append(i, t); return d;
+    }));
+    // export
+    $('svg-out').value = K.render(opts(S.style));
+    $('snippets').replaceChildren(...snippetsFor().map(([l, c]) => {
+      const d = document.createElement('div'); d.className = 'group'; d.style.gap = '6px';
+      const lab = document.createElement('div'); lab.className = 'muted'; lab.textContent = l;
+      const pre = document.createElement('pre'); pre.textContent = c; d.append(lab, pre); return d;
+    }));
+    history.replaceState(null, '', shareUrl());
+  }
+
+  // theme switch (same storage key as index.html)
+  const seg = $('theme-seg'), tb = [...seg.querySelectorAll('button')];
+  const setTheme = v => { tb.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.theme === v))); if (v === 'auto') delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = v; store.set('kiwi-icons-theme', v); update(); };
+  tb.forEach(b => b.addEventListener('click', () => setTheme(b.dataset.theme)));
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', update);
+  const savedTheme = store.get('kiwi-icons-theme');
+  if (savedTheme && tb.some(b => b.dataset.theme === savedTheme)) setTheme(savedTheme); else update();
+})();
+</script>
+</body>
+</html>
