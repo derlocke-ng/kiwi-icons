@@ -1,0 +1,241 @@
+{
+  "icon": "kiwi-fox",
+  "glyph": "fox",
+  "default": "ember",
+  "svg": "colorways/kiwi-fox/{style}/{colorway}.svg",
+  "styles": [
+    "classic",
+    "flat",
+    "night"
+  ],
+  "colorways": {
+    "ember": {
+      "label": "Ember",
+      "hue": 50,
+      "tone": 1.0,
+      "colors": {
+        "rim": "#A24E10",
+        "flesh": "#FFA167",
+        "core": "#FFF0E4",
+        "ink": "#552100",
+        "deep": "#3D1C08",
+        "text": "#883C00",
+        "glyph": "#552100",
+        "night_glyph": "#FFA167"
+      }
+    },
+    "crimson": {
+      "label": "Crimson",
+      "hue": 22,
+      "tone": 1.0,
+      "colors": {
+        "rim": "#A74546",
+        "flesh": "#FF9795",
+        "core": "#FFEEEC",
+        "ink": "#581B1D",
+        "deep": "#3F1919",
+        "text": "#8C3436",
+        "glyph": "#581B1D",
+        "night_glyph": "#FF9795"
+      }
+    },
+    "rose": {
+      "label": "Rose",
+      "hue": 355,
+      "tone": 1.0,
+      "colors": {
+        "rim": "#A0446D",
+        "flesh": "#FF96C2",
+        "core": "#FFEDF6",
+        "ink": "#541B35",
+        "deep": "#3C1928",
+        "text": "#863359",
+        "glyph": "#541B35",
+        "night_glyph": "#FF96C2"
+      }
+    },
+    "orchid": {
+      "label": "Orchid",
+      "hue": 318,
+      "tone": 1.0,
+      "colors": {
+        "rim": "#874E99",
+        "flesh": "#E3A0F8",
+        "core": "#FEEFFF",
+        "ink": "#452150",
+        "deep": "#321C39",
+        "text": "#703C80",
+        "glyph": "#452150",
+        "night_glyph": "#E3A0F8"
+      }
+    },
+    "violet": {
+      "label": "Violet",
+      "hue": 292,
+      "tone": 1.0,
+      "colors": {
+        "rim": "#6C58AD",
+        "flesh": "#C0ACFF",
+        "core": "#F5F2FF",
+        "ink": "#35285C",
+        "deep": "#272041",
+        "text": "#584691",
+        "glyph": "#35285C",
+        "night_glyph": "#C0ACFF"
+      }
+    },
+    "indigo": {
+      "label": "Indigo",
+      "hue": 268,
+      "tone": 1.0,
+      "colors": {
+        "rim": "#4963B3",
+        "flesh": "#97B9FF",
+        "core": "#ECF5FF",
+        "ink": "#1F2F60",
+        "deep": "#1A2444",
+        "text": "#395097",
+        "glyph": "#1F2F60",
+        "night_glyph": "#97B9FF"
+      }
+    },
+    "ocean": {
+      "label": "Ocean",
+      "hue": 240,
+      "tone": 1.0,
+      "colors": {
+        "rim": "#0070AB",
+        "flesh": "#5CC9FF",
+        "core": "#E4F8FF",
+        "ink": "#00375B",
+        "deep": "#022A41",
+        "text": "#005B90",
+        "glyph": "#00375B",
+        "night_glyph": "#5CC9FF"
+      }
+    },
+    "teal": {
+      "label": "Teal",
+      "hue": 192,
+      "tone": 1.0,
+      "colors": {
+        "rim": "#007F7C",
+        "flesh": "#00D9D5",
+        "core": "#DFFCFA",
+        "ink": "#00403F",
+        "deep": "#002F2E",
+        "text": "#006866",
+        "glyph": "#00403F",
+        "night_glyph": "#00D9D5"
+      }
+    },
+    "forest": {
+      "label": "Forest",
+      "hue": 150,
+      "tone": 1.0,
+      "colors": {
+        "rim": "#1D7D3E",
+        "flesh": "#75D78D",
+        "core": "#E8FBEB",
+        "ink": "#003F17",
+        "deep": "#0C2E16",
+        "text": "#09672E",
+        "glyph": "#003F17",
+        "night_glyph": "#75D78D"
+      }
+    },
+    "kiwi": {
+      "label": "Kiwi",
+      "hue": 128,
+      "tone": 1.0,
+      "colors": {
+        "rim": "#53760E",
+        "flesh": "#A3CF68",
+        "core": "#EFF9E4",
+        "ink": "#253B00",
+        "deep": "#1E2C07",
+        "text": "#416100",
+        "glyph": "#253B00",
+        "night_glyph": "#A3CF68"
+      }
+    },
+    "honey": {
+      "label": "Honey",
+      "hue": 82,
+      "tone": 1.0,
+      "colors": {
+        "rim": "#8D5F00",
+        "flesh": "#EAB444",
+        "core": "#FFF4DF",
+        "ink": "#492C00",
+        "deep": "#352300",
+        "text": "#764C00",
+        "glyph": "#492C00",
+        "night_glyph": "#EAB444"
+      }
+    },
+    "graphite": {
+      "label": "Graphite",
+      "hue": 255,
+      "tone": 0.1,
+      "colors": {
+        "rim": "#646970",
+        "flesh": "#B8BEC7",
+        "core": "#F4F5F7",
+        "ink": "#303337",
+        "deep": "#242729",
+        "text": "#51565C",
+        "glyph": "#303337",
+        "night_glyph": "#B8BEC7"
+      }
+    },
+    "duo-ember-ocean": {
+      "label": "Ember + Ocean",
+      "hue": 50,
+      "tone": 1.0,
+      "accent": 240,
+      "colors": {
+        "rim": "#A24E10",
+        "flesh": "#FFA167",
+        "core": "#D1F4FF",
+        "ink": "#552100",
+        "deep": "#3D1C08",
+        "text": "#883C00",
+        "glyph": "#005295",
+        "night_glyph": "#63CFFF"
+      }
+    },
+    "duo-violet-honey": {
+      "label": "Violet + Honey",
+      "hue": 292,
+      "tone": 1.0,
+      "accent": 82,
+      "colors": {
+        "rim": "#6C58AD",
+        "flesh": "#C0ACFF",
+        "core": "#FFECC9",
+        "ink": "#35285C",
+        "deep": "#272041",
+        "text": "#584691",
+        "glyph": "#743F00",
+        "night_glyph": "#F1BA4B"
+      }
+    },
+    "duo-graphite-ember": {
+      "label": "Graphite + Ember",
+      "hue": 255,
+      "tone": 0.1,
+      "accent": 50,
+      "colors": {
+        "rim": "#646970",
+        "flesh": "#B8BEC7",
+        "core": "#FFE6D1",
+        "ink": "#303337",
+        "deep": "#242729",
+        "text": "#51565C",
+        "glyph": "#882800",
+        "night_glyph": "#FFA86D"
+      }
+    }
+  }
+}

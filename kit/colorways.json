@@ -1,0 +1,122 @@
+{
+  "roles": {
+    "rim": {
+      "L": 0.52,
+      "C": 0.13
+    },
+    "flesh": {
+      "L": 0.8,
+      "C": 0.14
+    },
+    "core": {
+      "L": 0.97,
+      "C": 0.03
+    },
+    "ink": {
+      "L": 0.32,
+      "C": 0.09
+    },
+    "deep": {
+      "L": 0.27,
+      "C": 0.06
+    },
+    "text": {
+      "L": 0.45,
+      "C": 0.12
+    }
+  },
+  "accent_roles": {
+    "core": {
+      "L": 0.95,
+      "C": 0.05
+    },
+    "glyph": {
+      "L": 0.42,
+      "C": 0.15
+    },
+    "night_glyph": {
+      "L": 0.82,
+      "C": 0.14
+    }
+  },
+  "colorways": {
+    "ember": {
+      "label": "Ember",
+      "hue": 50,
+      "tone": 1.0
+    },
+    "crimson": {
+      "label": "Crimson",
+      "hue": 22,
+      "tone": 1.0
+    },
+    "rose": {
+      "label": "Rose",
+      "hue": 355,
+      "tone": 1.0
+    },
+    "orchid": {
+      "label": "Orchid",
+      "hue": 318,
+      "tone": 1.0
+    },
+    "violet": {
+      "label": "Violet",
+      "hue": 292,
+      "tone": 1.0
+    },
+    "indigo": {
+      "label": "Indigo",
+      "hue": 268,
+      "tone": 1.0
+    },
+    "ocean": {
+      "label": "Ocean",
+      "hue": 240,
+      "tone": 1.0
+    },
+    "teal": {
+      "label": "Teal",
+      "hue": 192,
+      "tone": 1.0
+    },
+    "forest": {
+      "label": "Forest",
+      "hue": 150,
+      "tone": 1.0
+    },
+    "kiwi": {
+      "label": "Kiwi",
+      "hue": 128,
+      "tone": 1.0
+    },
+    "honey": {
+      "label": "Honey",
+      "hue": 82,
+      "tone": 1.0
+    },
+    "graphite": {
+      "label": "Graphite",
+      "hue": 255,
+      "tone": 0.1
+    },
+    "duo-ember-ocean": {
+      "label": "Ember + Ocean",
+      "hue": 50,
+      "tone": 1.0,
+      "accent": 240
+    },
+    "duo-violet-honey": {
+      "label": "Violet + Honey",
+      "hue": 292,
+      "tone": 1.0,
+      "accent": 82
+    },
+    "duo-graphite-ember": {
+      "label": "Graphite + Ember",
+      "hue": 255,
+      "tone": 0.1,
+      "accent": 50
+    }
+  }
+}
